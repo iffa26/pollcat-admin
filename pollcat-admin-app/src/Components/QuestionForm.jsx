@@ -3,7 +3,7 @@ import DateTimePicker from "react-datetime-picker";
 import { postAQuestion } from "../api";
 //import AnswerOptions from "./AnswerOptions";
 
-class PostQuestinForm extends React.Component {
+class QuestionForm extends React.Component {
   state = {
     question: "",
     dateHuman: new Date(),
@@ -15,7 +15,13 @@ class PostQuestinForm extends React.Component {
     answer4: "",
     answer5: "",
     answer6: "",
-    img: ""
+    img: "",
+    img_answer1: "",
+    img_answer2: "",
+    img_answer3: "",
+    img_answer4: "",
+    img_answer5: "",
+    img_answer6: ""
   };
   render() {
     return (
@@ -29,7 +35,7 @@ class PostQuestinForm extends React.Component {
             value={this.state.question}
           ></input>
         </label>
-
+        <p></p>
         <label>
           Answer 1:
           <input
@@ -40,6 +46,16 @@ class PostQuestinForm extends React.Component {
           ></input>
         </label>
         <label>
+          Image 1:
+          <input
+            type="text"
+            name="img_answer1"
+            onChange={this.handleTextInput}
+            value={this.state.img_answer1}
+          ></input>
+        </label>
+        <p></p>
+        <label>
           Answer 2:
           <input
             type="text"
@@ -48,6 +64,16 @@ class PostQuestinForm extends React.Component {
             value={this.state.answer2}
           ></input>
         </label>
+        <label>
+          Image 2:
+          <input
+            type="text"
+            name="img_answer2"
+            onChange={this.handleTextInput}
+            value={this.state.img_answer2}
+          ></input>
+        </label>
+        <p></p>
         <label>
           Answer 3:
           <input
@@ -58,6 +84,16 @@ class PostQuestinForm extends React.Component {
           ></input>
         </label>
         <label>
+          Image 3:
+          <input
+            type="text"
+            name="img_answer3"
+            onChange={this.handleTextInput}
+            value={this.state.img_answer3}
+          ></input>
+        </label>
+        <p></p>
+        <label>
           Answer 4:
           <input
             type="text"
@@ -66,6 +102,16 @@ class PostQuestinForm extends React.Component {
             value={this.state.answer4}
           ></input>
         </label>
+        <label>
+          Image 4:
+          <input
+            type="text"
+            name="img_answer4"
+            onChange={this.handleTextInput}
+            value={this.state.img_answer4}
+          ></input>
+        </label>
+        <p></p>
         <label>
           Answer 5:
           <input
@@ -76,6 +122,16 @@ class PostQuestinForm extends React.Component {
           ></input>
         </label>
         <label>
+          Image 5:
+          <input
+            type="text"
+            name="img_answer5"
+            onChange={this.handleTextInput}
+            value={this.state.img_answer5}
+          ></input>
+        </label>
+        <p></p>
+        <label>
           Answer 6:
           <input
             type="text"
@@ -84,6 +140,16 @@ class PostQuestinForm extends React.Component {
             value={this.state.answer6}
           ></input>
         </label>
+        <label>
+          Image 6:
+          <input
+            type="text"
+            name="img_answer6"
+            onChange={this.handleTextInput}
+            value={this.state.img_answer6}
+          ></input>
+        </label>
+        <p></p>
         <label>
           Image URL:
           <input
@@ -102,6 +168,7 @@ class PostQuestinForm extends React.Component {
             value={this.state.questionStatus}
           ></input>
         </label>
+        <p></p>
         <label>
           Start Time:
           <DateTimePicker
@@ -109,6 +176,7 @@ class PostQuestinForm extends React.Component {
             value={this.state.dateHuman}
           />
         </label>
+        <p></p>
         <button>Add new question!</button>
       </form>
     );
@@ -136,19 +204,25 @@ class PostQuestinForm extends React.Component {
       answer4,
       answer5,
       answer6,
-      img
+      img,
+      img_answer1,
+      img_answer2,
+      img_answer3,
+      img_answer4,
+      img_answer5,
+      img_answer6
     } = this.state;
 
     const answersSubmitted = [
-      answer1,
-      answer2,
-      answer3,
-      answer4,
-      answer5,
-      answer6
+      { answer: answer1, img: img_answer1 },
+      { answer: answer2, img: img_answer2 },
+      { answer: answer3, img: img_answer3 },
+      { answer: answer4, img: img_answer4 },
+      { answer: answer5, img: img_answer5 },
+      { answer: answer6, img: img_answer6 }
     ];
 
-    const answerArray = answersSubmitted.filter(answer => answer !== "");
+    const answerArray = answersSubmitted.filter(obj => obj.answer !== "");
 
     console.log(question, dateHuman, questionStatus, answerArray, img);
 
@@ -173,9 +247,15 @@ class PostQuestinForm extends React.Component {
       answer4: "",
       answer5: "",
       answer6: "",
-      img: ""
+      img: "",
+      img_answer1: "",
+      img_answer2: "",
+      img_answer3: "",
+      img_answer4: "",
+      img_answer5: "",
+      img_answer6: ""
     });
   };
 }
 
-export default PostQuestinForm;
+export default QuestionForm;
