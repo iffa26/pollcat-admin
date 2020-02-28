@@ -4,6 +4,7 @@ export const getQuestions = () => {
   return axios
     .get("https://pollcat-backend.herokuapp.com/api/questions")
     .then(({ data: { questions } }) => {
+      console.log(questions, "in the api");
       return questions;
     });
 };

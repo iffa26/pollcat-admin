@@ -2,37 +2,36 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url(https://scontent-lhr8-1.xx.fbcdn.net/v/t1.15752-9/88228342_507946993240255_3057130203437334528_n.png?_nc_cat=109&_nc_sid=b96e70&_nc_ohc=RMOLR4XNdc0AX-fjk9c&_nc_ht=scontent-lhr8-1.xx&oh=c44007299c2c42e307a18f8b207dd440&oe=5EEEDE81);
+  /* background-color: #61dafb; */
+  font-family: "Spartan";
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  width: 160px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: darkturquoise;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+label {
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  height: 25px;
+  border-radius: 16px;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  list-style: none;
+}
+
+.questionInput {
+  width: 400px;
+  text-align: center;
 }

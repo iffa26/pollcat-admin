@@ -10,10 +10,8 @@ function AnswersList(props) {
       <div>
         <ul>
           {answers.map(answer => {
-            //const answerObj = JSON.parse(answer);
-            //console.log(JSON.parse(answer), "ans");
-            //console.log(answerObj.answer, "obj");
-            return <li key={answer}> {answer}</li>;
+            const answerObj = JSON.parse(answer);
+            return <li key={answer}> Answers: {answerObj.answer} </li>;
           })}
         </ul>
       </div>

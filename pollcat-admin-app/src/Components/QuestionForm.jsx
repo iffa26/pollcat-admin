@@ -29,6 +29,7 @@ class QuestionForm extends React.Component {
         <label>
           Question:
           <input
+            className="questionInput"
             type="text"
             name="question"
             onChange={this.handleTextInput}
@@ -159,7 +160,7 @@ class QuestionForm extends React.Component {
             value={this.state.img}
           ></input>
         </label>
-        <label>
+        {/* <label>
           Question Status:
           <input
             type="text"
@@ -167,7 +168,7 @@ class QuestionForm extends React.Component {
             onChange={this.handleTextInput}
             value={this.state.questionStatus}
           ></input>
-        </label>
+        </label> */}
         <p></p>
         <label>
           Start Time:

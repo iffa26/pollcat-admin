@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <NavBar />
+      <br />
       <Router>
         <AllQuestionsPage path="/" />
         <QuestionForm path="/newquestion" />

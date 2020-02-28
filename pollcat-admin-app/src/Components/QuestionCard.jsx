@@ -11,7 +11,7 @@ function QuestionCard(props) {
         <h3>Question: {question.question}</h3>
       </section>
       <section className="QuestionCard-info">
-        <p> Start Time: {question.startTime} </p>
+        <p> Start Time: 8:00 PM {question.startTime.slice(0, 10)} </p>
         <p> Status: {question.questionStatus}</p>
         <AnswersList answers={question.answerArray} />
         <DeleteQuestionButton
